@@ -15,10 +15,10 @@ namespace Simple_Project___Food_Menu
         private void setFormSizeAndMoveFixed()
         {
             this.Size = new Size(1528, 886);
-            int xWidth = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2; 
+            int xWidth = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
             int yHeight = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
 
-            this.Location = new Point(xWidth, yHeight); 
+            this.Location = new Point(xWidth, yHeight);
 
 
         }
@@ -30,6 +30,13 @@ namespace Simple_Project___Food_Menu
         private void Form1_Resize(object sender, EventArgs e)
         {
             setFormSizeAndMoveFixed();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Food_Price_Restuarant formFoodPrice = new Food_Price_Restuarant();
+            formFoodPrice.Show(); 
+
         }
     }
 }
