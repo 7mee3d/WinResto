@@ -83,6 +83,16 @@ namespace Simple_Project___Food_Menu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Carrot_Free_PNG_Image {
+            get {
+                object obj = ResourceManager.GetObject("Carrot-Free-PNG-Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_elletakesphotos_1660030 {
             get {
                 object obj = ResourceManager.GetObject("pexels-elletakesphotos-1660030", resourceCulture);
