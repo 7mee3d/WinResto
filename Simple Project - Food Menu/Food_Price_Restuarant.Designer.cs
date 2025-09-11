@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Food_Price_Restuarant));
             pictureBox1 = new PictureBox();
             NameFoodOneTacos = new Label();
@@ -49,6 +50,7 @@
             label6 = new Label();
             PriceBuddha = new Label();
             AddCartBuudha = new Button();
+            toolTip1 = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -115,6 +117,7 @@
             label1.Size = new Size(267, 32);
             label1.TabIndex = 4;
             label1.Text = "Total Price Order ($) : ";
+            toolTip1.SetToolTip(label1, "Total Price after add cart Items");
             // 
             // TotalPrice
             // 
@@ -137,18 +140,26 @@
             buttonAddCart.Size = new Size(122, 35);
             buttonAddCart.TabIndex = 6;
             buttonAddCart.Text = "Add To Cart";
+            toolTip1.SetToolTip(buttonAddCart, "Add To Cart Tacos");
             buttonAddCart.UseVisualStyleBackColor = false;
             buttonAddCart.Click += buttonAddCart_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(250, 247, 234);
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.White;
+            button1.FlatAppearance.MouseOverBackColor = Color.White;
+            button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(146, 774);
             button1.Name = "button1";
             button1.Size = new Size(93, 37);
             button1.TabIndex = 7;
             button1.Text = "Back ";
+            toolTip1.SetToolTip(button1, "This Button back of the Main screen");
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -222,6 +233,7 @@
             buttonAddCartRamen.Size = new Size(111, 35);
             buttonAddCartRamen.TabIndex = 13;
             buttonAddCartRamen.Text = "Add To Cart";
+            toolTip1.SetToolTip(buttonAddCartRamen, "Add To Cart Ramen");
             buttonAddCartRamen.UseVisualStyleBackColor = false;
             buttonAddCartRamen.Click += buttonAddCartRamen_Click;
             // 
@@ -289,8 +301,15 @@
             AddCartBuudha.Size = new Size(122, 35);
             AddCartBuudha.TabIndex = 19;
             AddCartBuudha.Text = "Add To Cart";
+            toolTip1.SetToolTip(AddCartBuudha, "Add To Cart  Buddha Bowl");
             AddCartBuudha.UseVisualStyleBackColor = false;
             AddCartBuudha.Click += AddCartBuudha_Click;
+            // 
+            // toolTip1
+            // 
+            toolTip1.IsBalloon = true;
+            toolTip1.ToolTipIcon = ToolTipIcon.Info;
+            toolTip1.ToolTipTitle = "Information";
             // 
             // Food_Price_Restuarant
             // 
@@ -355,5 +374,6 @@
         private Label label6;
         private Label PriceBuddha;
         private Button AddCartBuudha;
+        private ToolTip toolTip1;
     }
 }

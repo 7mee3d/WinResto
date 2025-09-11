@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // button1
@@ -44,8 +46,15 @@
             button1.Size = new Size(162, 47);
             button1.TabIndex = 0;
             button1.Text = "Order Now";
+            toolTip1.SetToolTip(button1, "Order from restuarant this button go to the Menu Restuarant");
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // toolTip1
+            // 
+            toolTip1.IsBalloon = true;
+            toolTip1.ToolTipIcon = ToolTipIcon.Info;
+            toolTip1.ToolTipTitle = "Information";
             // 
             // Form1
             // 
@@ -69,5 +78,6 @@
         #endregion
 
         private Button button1;
+        private ToolTip toolTip1;
     }
 }
